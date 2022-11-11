@@ -42,7 +42,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: 100%;
+  object-fit: cover;
+  background-size: 100% 300px;
   background-image: var(--background);
   background-color: var(--body-background);
   background-repeat: no-repeat;
@@ -267,7 +268,7 @@ input[type='radio']:checked + label {
 
 @media (max-width: 820px) {
   body {
-    background-size: 100% 40%;
+    background-size: 100% 200px;
   }
   .container {
     width: 327px;
