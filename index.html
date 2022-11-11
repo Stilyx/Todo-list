@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body class="theme-light">
+    <main class="container">
+      <div class="title-mode">
+        <h1 class="title">TODO</h1>
+        <img src="images/moon.png" alt="Moon image" class="icon-theme" />
+      </div>
+      <div class="create-todo"><input type="text" name="todoCreate" id="todoCreate" placeholder="Create a new todo..." autocomplete="off" /></div>
+
+      <div class="todoList">
+        <ul class="todo"></ul>
+        <div class="classification">
+          <p class="options"><span id="remaining">0</span>items left</p>
+          <form>
+            <input type="radio" name="options" id="all" checked />
+            <label for="all">All</label>
+            <input type="radio" name="options" id="active" />
+            <label for="active">Active</label>
+            <input type="radio" name="options" id="completed" />
+            <label for="completed">Completed</label>
+          </form>
+          <p class="clear options">Clear Completed</p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
