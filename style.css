@@ -314,5 +314,6 @@ input[type='radio']:checked + label {
     display: flex;
     justify-content: center;
     gap: 60px;
+    font-size: 12px;
   }
 }
