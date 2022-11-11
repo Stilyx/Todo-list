@@ -42,9 +42,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
+  background-size: 100%;
   background-image: var(--background);
-  background-size: 100% 100%;
   background-color: var(--body-background);
   background-repeat: no-repeat;
 }
@@ -266,7 +265,10 @@ input[type='radio']:checked + label {
 
 /* Media query */
 
-@media (max-width: 600px) {
+@media (max-width: 820px) {
+  body {
+    background-size: 100% 40%;
+  }
   .container {
     width: 327px;
   }
