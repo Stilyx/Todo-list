@@ -7,26 +7,32 @@ const icon = document.querySelector('.icon-theme');
 const clear = document.querySelector('.clear');
 const classification = document.querySelector('.classification');
 
+// Objects
+
+const lightMode = {
+  className: 'theme-light',
+  imageSearch: 'images/moon.png'
+};
+
+const darkMode = {
+  className: 'theme-dark',
+  imageSearch: 'images/sun.png'
+};
+
 // Functions
 
 const isDisplayFlex = item => (item.style.display = 'flex');
 const isDisplayNone = item => (item.style.display = 'none');
 const insertRemainingLength = item => (item.textContent = ul.childNodes.length);
-
-// Dark and Light Mode
+const setThemeClass = ({className, imageSearch}) => {
+  icon.src = imageSearch;
+  document.body.setAttribute('class', className);
+};
 
 const changeTheme = () => {
   const bodyClass = document.body.classList[0];
-  if (bodyClass === 'theme-light') {
-    document.body.setAttribute('class', 'theme-dark');
-    icon.src = 'images/sun.png';
-  } else {
-    document.body.setAttribute('class', 'theme-light');
-    icon.src = 'images/moon.png';
-  }
+  bodyClass === 'theme-light' ? setThemeClass(darkMode) : setThemeClass(lightMode);
 };
-
-// Todo List creator
 
 const createTodoList = e => {
   const li = document.createElement('li');
@@ -110,6 +116,7 @@ const removeCompletedLiChecked = () => {
 };
 
 // Event Listeners
+
 icon.addEventListener('click', changeTheme);
 createTodo.addEventListener('keypress', createTodoList);
 ul.addEventListener('click', checkList);
