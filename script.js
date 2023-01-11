@@ -118,7 +118,7 @@ const removeCompletedLiChecked = () => {
 // Event Listeners
 
 icon.addEventListener('click', changeTheme);
-createTodo.addEventListener('keypress', createTodoList);
 ul.addEventListener('click', checkList);
 options.forEach(item => item.addEventListener('click', checkedOptions));
 clear.addEventListener('click', removeCompletedLiChecked);
+createTodo.addEventListener('keypress', createTodoList);
